@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import '../Styles/SliderBtn.css';
 import { FaUserCircle } from 'react-icons/fa';
 import { FaFileInvoice } from 'react-icons/fa';
+import { IoIosArrowForward } from 'react-icons/io';
 
 const Sidebar = () => {
   return (
@@ -63,6 +64,102 @@ const Sidebar = () => {
                 <div className="flex justify-center mx-auto items-center gap-2 text-lg">
                   <FaFileInvoice></FaFileInvoice>
                   <a className="font-normal text-black">Invoices</a>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/invoice">
+                <div className="flex justify-center mx-auto items-center gap-2 text-lg">
+                  <FaFileInvoice></FaFileInvoice>
+                  <a className="font-normal text-black">Reports</a>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/invoice">
+                <div className="flex justify-center mx-auto items-center gap-2 text-lg">
+                  <FaFileInvoice></FaFileInvoice>
+                  <a className="font-normal text-black">Branches</a>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/invoice">
+                <div className="flex justify-center mx-auto items-center gap-2 text-lg">
+                  <FaFileInvoice></FaFileInvoice>
+                  <a className="font-normal text-black">Tests</a>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/invoice">
+                <div className="flex justify-center mx-auto items-center gap-2 text-lg">
+                  <FaFileInvoice></FaFileInvoice>
+                  <a className="font-normal text-black">Cultures</a>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/invoice">
+                <div className="flex justify-center mx-auto items-center gap-2 text-lg">
+                  <FaFileInvoice></FaFileInvoice>
+                  <a className="font-normal text-black">Culture Options</a>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/invoice">
+                <div className="flex justify-center mx-auto items-center gap-2 text-lg">
+                  <FaFileInvoice></FaFileInvoice>
+                  <a className="font-normal text-black">Antibiotics</a>
+                </div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/invoice">
+                <div className="flex justify-center mx-auto items-center gap-2 text-lg">
+                  <FaFileInvoice></FaFileInvoice>
+                  <a className="font-normal text-black">Doctor</a>
+                </div>
+              </Link>
+            </li>
+
+            <li className=" dropdown ">
+              <Link to="">
+                <div className="flex justify-center mx-auto items-center gap-2 text-lg">
+                  <FaFileInvoice></FaFileInvoice>
+                  <a
+                    className="font-normal text-black"
+                    tabIndex={0}
+                    role="button"
+                  >
+                    Pricelist
+                  </a>
+                  <IoIosArrowForward></IoIosArrowForward>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content z-[1] menu p-2 mt-7 shadow bg-base-100 rounded-box w-52"
+                  >
+                    <Link to="/test">
+                      <li>
+                        <a className=" text-center ">Test</a>
+                      </li>
+                    </Link>
+
+
+                    <Link to='/culture'>
+                      <li>
+                        <a className=" text-center ">Culture</a>
+                      </li>
+                    </Link>
+                  </ul>
                 </div>
               </Link>
             </li>
