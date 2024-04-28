@@ -34,16 +34,36 @@ const Sidebar = () => {
           ></label>
           <ul className="menu p-4 w-52 min-h-full bg-base-200 text-base-content">
             {/* Sidebar content here */}
+
+            {/* user */}
+            <div className="rounded-full flex justify-center items-center mx-auto gap-5">
+              <img
+                className="rounded-full w-10"
+                alt="Tailwind CSS Navbar component"
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
+              <h1 className="text-xl font-semibold">Dr. Jenny</h1>
+            </div>
+
+            <hr className="bg-gray-300 p-[0.5px] mt-5 mb-5" />
+            {/* user */}
+
             <li>
               <Link to="/profile">
-                <div className="flex justify-center mx-auto items-center gap-2 text-xl">
+                <div className="flex justify-center mx-auto items-center gap-2 text-lg">
                   <FaUserCircle></FaUserCircle>
                   <a className="font-normal text-black">Profile</a>
                 </div>
               </Link>
             </li>
+
             <li>
-              <a>Sidebar Item 2</a>
+              <Link to="/profile">
+                <div className="flex justify-center mx-auto items-center gap-2 text-lg">
+                  <FaUserCircle></FaUserCircle>
+                  <a className="font-normal text-black">Invoices</a>
+                </div>
+              </Link>
             </li>
           </ul>
         </div>
