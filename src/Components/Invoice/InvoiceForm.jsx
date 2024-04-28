@@ -1,105 +1,115 @@
+import Navbar from '../Navbar/Navbar';
+
 const InvoiceForm = () => {
   return (
     <div>
-      <div className="hero min-h-screen w-full">
-        <div className="hero-content">
+      <Navbar></Navbar>
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="card shadow-2xl bg-base-100">
-            <form className="card-body" onSubmit={handleSubmit}>
-              <div className="flex justify-center items-center mx-auto lg:flex-row md:flex-col flex-col gap-5">
+            <h1 className="text-center pt-5 pb-5 bg-blue-700 text-white font-semibold rounded-lg">
+              Patient Info
+            </h1>
+            <form className="card-body">
+              <div className="flex justify-center items-center mx-auto gap-5 lg:flex-row md:flex-col flex-col">
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">First Name</span>
+                    <span className="label-text">Name</span>
                   </label>
                   <input
                     type="text"
-                    name="firstname"
-                    placeholder="Your First Name"
-                    className={`input input-bordered ${
-                      firstNameError ? 'input-error' : ''
-                    }`}
-                    value={firstName}
-                    onChange={e =>
-                      handleInputChange(e, setFirstName, setFirstNameError)
-                    }
+                    placeholder="Your Name"
+                    name="name"
+                    className="input input-bordered"
+                    required
                   />
-                  {firstName && !firstNameError && (
-                    <p className="text-green-500">Looks Good</p>
-                  )}
-                  {firstNameError && (
-                    <p className="text-red-500">
-                      Please enter your first name.
-                    </p>
-                  )}
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Last Name</span>
+                    <span className="label-text">Email</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    name="email"
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Code</span>
                   </label>
                   <input
                     type="text"
-                    name="lastname"
-                    placeholder="Your Last Name"
-                    className={`input input-bordered ${
-                      lastNameError ? 'input-error' : ''
-                    }`}
-                    value={lastName}
-                    onChange={e =>
-                      handleInputChange(e, setLastName, setLastNameError)
-                    }
+                    placeholder="Enter your code"
+                    name="code"
+                    className="input input-bordered"
+                    required
                   />
-                  {lastName && !lastNameError && (
-                    <p className="text-green-500">Looks Good</p>
-                  )}
-                  {lastNameError && (
-                    <p className="text-red-500">Please enter your last name.</p>
-                  )}
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Date of Birth</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your Birth Date"
+                    name="date"
+                    className="input input-bordered"
+                    required
+                  />
                 </div>
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  className={`input input-bordered ${
-                    emailError ? 'input-error' : ''
-                  }`}
-                  value={email}
-                  onChange={e => handleInputChange(e, setEmail, setEmailError)}
-                />
-                {email && !emailError && (
-                  <p className="text-green-500">Looks Good</p>
-                )}
-                {emailError && (
-                  <p className="text-red-500">
-                    Please enter a valid email address.
-                  </p>
-                )}
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  className={`input input-bordered ${
-                    passwordError ? 'input-error' : ''
-                  }`}
-                  value={password}
-                  onChange={e =>
-                    handleInputChange(e, setPassword, setPasswordError)
-                  }
-                />
-                {password && !passwordError && (
-                  <p className="text-green-500">Looks Good</p>
-                )}
-                {passwordError && (
-                  <p className="text-red-500">Please enter your password.</p>
-                )}
+              <div className="flex justify-center items-center mx-auto gap-5 lg:flex-row md:flex-col flex-col">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Address</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Your Address Here"
+                    name="address"
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Phone</span>
+                  </label>
+                  <input
+                    type="number"
+                    placeholder="Enter your phone number here"
+                    name="phone"
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Gender</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Your gender here"
+                    name="gender"
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Doctor Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your Appointed Doctor"
+                    name="doctor"
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Submit</button>
