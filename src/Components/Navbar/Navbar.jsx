@@ -1,9 +1,14 @@
+import { IoFlaskSharp } from 'react-icons/io5';
+
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-lg">
+      <div className="navbar bg-base-100 shadow-md">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <div className='text-2xl'>
+            <IoFlaskSharp></IoFlaskSharp>
+          </div>
+          <a className="btn btn-ghost text-xl italic">Marcuric-Lab</a>
         </div>
         <div className="flex-none gap-2">
           <div className="form-control">
