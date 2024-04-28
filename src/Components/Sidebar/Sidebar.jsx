@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../Styles/SliderBtn.css';
 import { FaUserCircle } from 'react-icons/fa';
+import { FaFileInvoice } from 'react-icons/fa';
 
 const Sidebar = () => {
   return (
@@ -58,9 +59,9 @@ const Sidebar = () => {
             </li>
 
             <li>
-              <Link to="/profile">
+              <Link to="/invoice">
                 <div className="flex justify-center mx-auto items-center gap-2 text-lg">
-                  <FaUserCircle></FaUserCircle>
+                  <FaFileInvoice></FaFileInvoice>
                   <a className="font-normal text-black">Invoices</a>
                 </div>
               </Link>
