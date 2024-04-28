@@ -3,6 +3,13 @@ import '../Styles/SliderBtn.css';
 import { FaUserCircle } from 'react-icons/fa';
 import { FaFileInvoice } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
+import { TbReport } from 'react-icons/tb';
+import { AiOutlineBranches } from 'react-icons/ai';
+import { GiHypodermicTest } from 'react-icons/gi';
+import { GiTransparentTubes } from 'react-icons/gi';
+import { GiMedicines } from 'react-icons/gi';
+import { FaUserDoctor } from 'react-icons/fa6';
+import { GiPriceTag } from 'react-icons/gi';
 
 const Sidebar = () => {
   return (
@@ -69,63 +76,63 @@ const Sidebar = () => {
             </li>
 
             <li>
-              <Link to="/invoice">
+              <Link to="/reports">
                 <div className="flex justify-center mx-auto items-center gap-2 text-lg">
-                  <FaFileInvoice></FaFileInvoice>
+                  <TbReport></TbReport>
                   <a className="font-normal text-black">Reports</a>
                 </div>
               </Link>
             </li>
 
             <li>
-              <Link to="/invoice">
+              <Link to="/branches">
                 <div className="flex justify-center mx-auto items-center gap-2 text-lg">
-                  <FaFileInvoice></FaFileInvoice>
+                  <AiOutlineBranches></AiOutlineBranches>
                   <a className="font-normal text-black">Branches</a>
                 </div>
               </Link>
             </li>
 
             <li>
-              <Link to="/invoice">
+              <Link to="/tests">
                 <div className="flex justify-center mx-auto items-center gap-2 text-lg">
-                  <FaFileInvoice></FaFileInvoice>
+                  <GiHypodermicTest></GiHypodermicTest>
                   <a className="font-normal text-black">Tests</a>
                 </div>
               </Link>
             </li>
 
             <li>
-              <Link to="/invoice">
+              <Link to="/cultures">
                 <div className="flex justify-center mx-auto items-center gap-2 text-lg">
-                  <FaFileInvoice></FaFileInvoice>
+                  <GiTransparentTubes></GiTransparentTubes>
                   <a className="font-normal text-black">Cultures</a>
                 </div>
               </Link>
             </li>
 
             <li>
-              <Link to="/invoice">
+              <Link to="/culture_options">
                 <div className="flex justify-center mx-auto items-center gap-2 text-lg">
-                  <FaFileInvoice></FaFileInvoice>
+                  <GiTransparentTubes></GiTransparentTubes>
                   <a className="font-normal text-black">Culture Options</a>
                 </div>
               </Link>
             </li>
 
             <li>
-              <Link to="/invoice">
+              <Link to="/antibiotics">
                 <div className="flex justify-center mx-auto items-center gap-2 text-lg">
-                  <FaFileInvoice></FaFileInvoice>
+                  <GiMedicines></GiMedicines>
                   <a className="font-normal text-black">Antibiotics</a>
                 </div>
               </Link>
             </li>
 
             <li>
-              <Link to="/invoice">
+              <Link to="/doctor">
                 <div className="flex justify-center mx-auto items-center gap-2 text-lg">
-                  <FaFileInvoice></FaFileInvoice>
+                  <FaUserDoctor></FaUserDoctor>
                   <a className="font-normal text-black">Doctor</a>
                 </div>
               </Link>
@@ -134,7 +141,7 @@ const Sidebar = () => {
             <li className=" dropdown ">
               <Link to="">
                 <div className="flex justify-center mx-auto items-center gap-2 text-lg">
-                  <FaFileInvoice></FaFileInvoice>
+                  <GiPriceTag></GiPriceTag>
                   <a
                     className="font-normal text-black"
                     tabIndex={0}
@@ -149,14 +156,19 @@ const Sidebar = () => {
                   >
                     <Link to="/test">
                       <li>
-                        <a className=" text-center ">Test</a>
+                        <div className="flex justify-center items-center mx-auto text-black">
+                          <GiHypodermicTest></GiHypodermicTest>
+                          <a className=" text-center ">Test</a>
+                        </div>
                       </li>
                     </Link>
 
-
-                    <Link to='/culture'>
+                    <Link to="/culture">
                       <li>
-                        <a className=" text-center ">Culture</a>
+                        <div className="flex justify-center items-center mx-auto text-black">
+                          <GiTransparentTubes></GiTransparentTubes>
+                          <a className=" text-center ">Culture</a>
+                        </div>
                       </li>
                     </Link>
                   </ul>
