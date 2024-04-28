@@ -1,40 +1,27 @@
 import { IoFlaskSharp } from 'react-icons/io5';
 import Sidebar from '../Sidebar/Sidebar';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-md">
+      <div className="navbar bg-base-100 shadow-md mx-auto">
         {/* sidebar start */}
         <Sidebar></Sidebar>
         {/* sidebar end */}
 
-        
         {/* nav start */}
 
-        <div className="flex-1 navbar-start">
-          <div className="text-2xl">
-            <IoFlaskSharp></IoFlaskSharp>
+        <Link to="/">
+          <div className="flex-1 navbar-center mx-auto flex justify-center items-center">
+            <div className="text-2xl">
+              <IoFlaskSharp></IoFlaskSharp>
+            </div>
+            <a className="btn btn-ghost text-xl italic">Marcuric-Lab</a>
           </div>
-          <a className="btn btn-ghost text-xl italic">Marcuric-Lab</a>
-        </div>
-        <div className="navbar-end">
-          <button className="btn btn-ghost btn-circle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
+        </Link>
+
+        <div className="navbar-end mx-auto">
           <button className="btn btn-ghost btn-circle">
             <div className="indicator">
               <svg
@@ -55,7 +42,14 @@ const Navbar = () => {
             </div>
           </button>
         </div>
-        <div className="flex-none gap-2">
+        <div className="form-control">
+          <input
+            type="text"
+            placeholder="Search"
+            className="input input-bordered w-24 md:w-auto"
+          />
+        </div>
+        <div className="flex-none gap-2 mx-auto">
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}

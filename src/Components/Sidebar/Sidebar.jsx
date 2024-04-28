@@ -13,7 +13,7 @@ import { GiPriceTag } from 'react-icons/gi';
 
 const Sidebar = () => {
   return (
-    <div>
+    <div className='z-10'>
       {/* sidebar start */}
 
       <div className="pr-10">
