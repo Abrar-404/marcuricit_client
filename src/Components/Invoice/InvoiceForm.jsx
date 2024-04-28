@@ -111,6 +111,43 @@ const InvoiceForm = () => {
                   />
                 </div>
               </div>
+
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Subtotal</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="0"
+                  name="subtotal"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Contract Info</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Contract Info"
+                  name="contract"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Discount</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="0"
+                  name="discount"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Submit</button>
               </div>
