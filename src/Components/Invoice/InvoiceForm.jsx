@@ -1,76 +1,7 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import Navbar from '../../Navbar/Navbar';
-import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom';
-import gif from '../../../assets/formGif.gif';
-
-const Profile = () => {
-  const navigate = useNavigate();
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [firstNameError, setFirstNameError] = useState(false);
-  const [lastNameError, setLastNameError] = useState(false);
-  const [emailError, setEmailError] = useState(false);
-  const [passwordError, setPasswordError] = useState(false);
-
-  const handleInputChange = (e, setValue, setError) => {
-    const value = e.target.value.trim();
-    setValue(value);
-    setError(value === '');
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-
-    // Check for empty fields
-    setFirstNameError(firstName === '');
-    setLastNameError(lastName === '');
-    setEmailError(!/\S+@\S+\.\S+/.test(email));
-    setPasswordError(password === '');
-
-    // Check if any error exists
-    if (firstNameError || lastNameError || emailError || passwordError) {
-      return;
-    }
-
-    // Form data
-    const userData = {
-      firstName,
-      lastName,
-      email,
-      password,
-    };
-
-    // Simulate sending data to the server
-    axios
-      .post('http://localhost:5000/userData', userData)
-      .then(res => {
-        console.log(res.data);
-        if (res.data.insertedId) {
-          Swal.fire({
-            title: 'Welcome!',
-            text: 'To Your Dashboard',
-            icon: 'success',
-          });
-          navigate('/');
-        }
-      })
-      .catch(err => console.error(err));
-  };
-
+const InvoiceForm = () => {
   return (
     <div>
-      <div className="z-[1]">
-        <Navbar />
-      </div>
-
-      <div className="hero min-h-screen w-full bg-base-200 flex justify-center items-center mx-auto lg:flex-row md:flex-col flex-col">
-        <div>
-          <img className="w-[400px] h-[500px] " src={gif} alt="" />
-        </div>
+      <div className="hero min-h-screen w-full">
         <div className="hero-content">
           <div className="card shadow-2xl bg-base-100">
             <form className="card-body" onSubmit={handleSubmit}>
@@ -181,4 +112,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default InvoiceForm;
